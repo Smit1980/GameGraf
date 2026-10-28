@@ -1,0 +1,56 @@
+@font-face{font-family:ScreenUnbounded;src:url('/assets/fonts/Unbounded.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:ScreenInter;src:url('/assets/fonts/Inter.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:ScreenMono;src:url('/assets/fonts/JetBrainsMono.woff2') format('woff2');font-weight:100 900;font-display:swap}
+/* The projection owns its viewport. Never inherit the page entrance transform. */
+body.screen-mode{background:#070b1a;overflow:hidden}
+body.screen-mode:before,body.screen-mode #stars{display:none}
+body.screen-mode #app{width:100%;max-width:none;height:100vh;height:100dvh;min-height:0;margin:0;padding:0;overflow:hidden}
+body.screen-mode .constellation{position:relative;inset:auto;width:100%;height:100%;min-height:0;margin:0;padding:clamp(10px,1.4vw,42px);display:grid;grid-template-rows:auto minmax(0,1fr);gap:clamp(10px,1.3vh,24px);animation:none;transform:none;color:#f2f6ff;font-family:ScreenInter,sans-serif;background:linear-gradient(110deg,#070b1aa8,#070b1ae8),url('/assets/brand/bg-screen.webp') center/cover}
+.constellation__head{display:flex;align-items:center;justify-content:space-between;min-width:0;gap:20px;min-height:clamp(40px,5.5vh,85px)}
+.constellation__head>div:first-child{display:flex;align-items:center;min-width:0;gap:clamp(16px,2vw,60px)}
+.constellation__kicker{display:flex;align-items:center;gap:8px;flex:none;font:700 clamp(10px,.85vw,26px)/1.3 ScreenUnbounded,sans-serif;letter-spacing:.02em;color:#b9caeb}
+.constellation__kicker img{width:clamp(26px,2.3vw,70px);height:clamp(26px,2.3vw,70px);object-fit:contain}
+.constellation__head h1{font:600 clamp(18px,1.65vw,54px)/1.2 ScreenUnbounded,sans-serif;letter-spacing:-.025em;margin:0;max-width:none;text-wrap:balance}
+.constellation__status{flex:none;color:#a9b6d9;font:600 clamp(10px,.8vw,24px)/1.3 ScreenMono,monospace}
+.constellation__body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,23%);gap:clamp(10px,1.2vw,32px);min-height:0;min-width:0}
+.constellation__stage{position:relative;min-height:0;min-width:0;overflow:hidden;border:1px solid #b8ceff22;border-radius:clamp(14px,1.3vw,32px);background:linear-gradient(145deg,#09162de8,#080e20d9)}
+.constellation__canvas{display:block;width:100%;height:100%}
+.constellation__legend{position:absolute;top:clamp(12px,1.5vh,30px);left:clamp(12px,1.3vw,32px);max-width:55%;color:#8299bf;font:600 clamp(9px,.65vw,20px)/1.3 ScreenInter,sans-serif;letter-spacing:.09em;pointer-events:none}
+.constellation__side{min-height:0;display:flex;flex-direction:column;gap:clamp(8px,1.2vh,24px)}
+.constellation-card{min-width:0;padding:clamp(12px,1.25vw,36px);background:#101d38bc;border:1px solid #8caaff22;border-radius:clamp(14px,1.3vw,32px)}
+.constellation-card__label{color:#a9b6d9;font:600 clamp(11px,.85vw,28px)/1.4 ScreenInter,sans-serif;letter-spacing:.08em}
+.constellation-card__number{font:700 clamp(48px,8.2vmin,200px)/1 ScreenUnbounded,sans-serif;letter-spacing:-.05em;font-variant-numeric:tabular-nums;margin:clamp(6px,1vh,24px) 0;color:#f2f6ff}
+.constellation-card__hint{color:#879dc3;font:500 clamp(10px,.8vw,26px)/1.4 ScreenInter,sans-serif}
+.constellation-card--join{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,1.5vh,28px);text-align:center}
+.constellation-qr-holder{width:100%;min-height:0;display:flex;align-items:center;justify-content:center}
+.constellation-qr{width:min(100%,36vh);aspect-ratio:1;padding:clamp(8px,.8vw,20px);background:white;border-radius:clamp(10px,1vw,24px)}
+.constellation-qr img{display:block;width:100%;height:100%}
+.constellation-url{max-width:100%;overflow-wrap:anywhere;color:#d0e7ff;font:600 clamp(12px,1vw,32px)/1.4 ScreenMono,monospace}
+.constellation__warning{color:#bbcae5;font:500 clamp(12px,1vw,28px)/1.5 ScreenInter,sans-serif}
+.mascot-panel{display:flex;align-items:center;flex:none;gap:4px;min-width:0;height:clamp(72px,13vh,260px)}
+.mascot-panel img{height:100%;width:38%;object-fit:contain;animation:mascot-float 5s ease-in-out infinite}
+.mascot-panel p{margin:0;font:500 clamp(11px,.9vw,28px)/1.45 ScreenInter,sans-serif;color:#b5c7e8}
+.arrival-toast{position:absolute;right:clamp(12px,1.3vw,32px);top:clamp(12px,1.5vh,30px);max-width:42%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#f2f6ff;font:600 clamp(12px,1vw,30px)/1.4 ScreenInter,sans-serif;pointer-events:none}
+.arrival-toast:empty{display:none}
+.bridge-summary{position:absolute;bottom:clamp(12px,1.5vh,30px);left:clamp(12px,1.3vw,32px);right:clamp(12px,1.3vw,32px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1vw,24px);pointer-events:none}
+.bridge-summary>div{min-width:0;padding-top:8px;border-top:1px solid #a9c9ff26;display:flex;flex-direction:column;gap:4px;color:#a9bbd9;font:500 clamp(10px,.85vw,26px)/1.35 ScreenInter,sans-serif}
+.bridge-summary b{color:#e4efff;font:600 clamp(12px,1vw,30px)/1.2 ScreenMono,monospace}
+.team-overlay{position:absolute;inset:7% 2% 4%;display:none;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:2%;pointer-events:none}
+.team-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(4px,.8vh,16px);text-align:center;min-width:0;min-height:0;padding:1vh .5vw;border-top:2px solid var(--team-color);background:linear-gradient(0deg,#081327e8,#08132720);color:#fff;border-radius:12px}
+.team-card strong{font:600 clamp(12px,1.05vw,34px)/1.25 ScreenUnbounded,sans-serif;overflow-wrap:anywhere}
+.team-card span{font:600 clamp(11px,.9vw,30px)/1.2 ScreenMono,monospace;color:var(--team-color)}
+.team-emblem{height:clamp(40px,8vh,160px);width:clamp(40px,8vh,160px);object-fit:contain}
+.team-qr{display:block;background:#fff;width:clamp(48px,10vh,210px);height:clamp(48px,10vh,210px);padding:5px;border-radius:7px}
+.team-qr-empty{font:500 clamp(9px,.65vw,22px)/1.3 ScreenInter,sans-serif;color:#8299bf}
+.team-unassigned{position:absolute;bottom:-3%;left:0;font:500 clamp(10px,.8vw,24px)/1.2 ScreenInter,sans-serif;color:#a9b6d9}
+.round-info{position:absolute;left:3%;right:3%;top:6%;justify-content:space-between;align-items:center;gap:12px;padding:1vh 1vw;background:#0a142be8;border:1px solid #8caaff33;border-radius:14px;color:#fff;font:600 clamp(16px,1.6vw,48px)/1.2 ScreenUnbounded,sans-serif}
+.round-info span{color:#22d3ee}.round-info b{font:600 clamp(24px,2.5vw,80px)/1 ScreenMono,monospace}
+.final-podium{position:absolute;left:2%;right:2%;top:5%;display:none;justify-content:space-around;gap:10px;color:#fff}
+.final-podium div{min-width:0;flex:1;display:flex;flex-direction:column;padding:8px 12px;background:#0a142bd9;border-radius:12px;font:500 clamp(10px,.95vw,30px)/1.3 ScreenInter,sans-serif}
+.final-podium strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.final-podium b{font:600 clamp(11px,.9vw,28px)/1.4 ScreenMono,monospace;color:#a9c9ff}
+.team-overlay.is-final{inset:22% 2% 4%}.is-final .team-emblem{height:6vh;width:6vh}.is-final .team-qr{height:8vh;width:8vh}
+.team-score{width:80%;height:5px;background:#ffffff20;border-radius:6px;overflow:hidden}.team-score i{display:block;height:100%;background:var(--team-color)}
+@keyframes mascot-float{50%{transform:translateY(-6px)}}
+@media(max-width:900px){.constellation__head>div:first-child{gap:10px}.constellation__kicker{font-size:0}.constellation__status{font-size:9px}.constellation__body{grid-template-columns:minmax(0,1fr) minmax(0,24%)}.mascot-panel p{font-size:10px}.constellation-card{padding:10px}.constellation__head h1{font-size:17px}}
+@media(orientation:portrait){.constellation__body{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(120px,23%)}.constellation__side{display:grid;grid-template-columns:1fr 1.4fr;gap:10px}.mascot-panel{display:none}.constellation-card--join{display:grid;grid-template-columns:1fr 1fr;gap:8px}.constellation-qr-holder{grid-column:2;grid-row:1/3;height:100%}.constellation-qr{width:auto;height:100%;max-height:18vh}.constellation-url{grid-column:1;grid-row:2;font-size:11px}.constellation__status{display:none}}
+@media(prefers-reduced-motion:reduce){.mascot-panel img{animation:none}}

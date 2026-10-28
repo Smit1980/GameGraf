@@ -1,0 +1,8 @@
+node_modules/
+.build-deps/
+artifacts/
+state.json
+*.log
+.env
+.env.*
+!.env.example

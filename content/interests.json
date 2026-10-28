@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Космос",
+    "icon": "space",
+    "color": "#5B8CFF"
+  },
+  {
+    "name": "Игры",
+    "icon": "games",
+    "color": "#9B6BFF"
+  },
+  {
+    "name": "Футбол",
+    "icon": "football",
+    "color": "#3DDC84"
+  },
+  {
+    "name": "Аниме",
+    "icon": "anime",
+    "color": "#FF6FB5"
+  },
+  {
+    "name": "Программирование",
+    "icon": "code",
+    "color": "#22D3EE"
+  },
+  {
+    "name": "Музыка",
+    "icon": "music",
+    "color": "#FFC233"
+  },
+  {
+    "name": "Кино",
+    "icon": "cinema",
+    "color": "#FF5A5A"
+  },
+  {
+    "name": "Рисование",
+    "icon": "art",
+    "color": "#FF8A3D"
+  },
+  {
+    "name": "Наука",
+    "icon": "science",
+    "color": "#A3E635"
+  },
+  {
+    "name": "Бизнес",
+    "icon": "business",
+    "color": "#E2B97F"
+  },
+  {
+    "name": "Спорт",
+    "icon": "sport",
+    "color": "#94A3B8"
+  },
+  {
+    "name": "Котики",
+    "icon": "cats",
+    "color": "#FFB4A2"
+  }
+]

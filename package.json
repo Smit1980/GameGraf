@@ -1,0 +1,17 @@
+{
+  "name": "web-of-the-room",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "graphology": "^0.26.0",
+    "graphology-layout-forceatlas2": "^0.10.1",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

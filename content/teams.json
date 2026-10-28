@@ -1,0 +1,74 @@
+[
+  {
+    "id": "game-dev",
+    "name": "Разработка игр",
+    "color": "#9B6BFF",
+    "emoji": "🎮",
+    "maxUrl": "",
+    "adult": false,
+    "icon": "team-gamedev"
+  },
+  {
+    "id": "design-art",
+    "name": "Дизайн и арт",
+    "color": "#FF8A3D",
+    "emoji": "🎨",
+    "maxUrl": "",
+    "adult": false,
+    "icon": "team-design"
+  },
+  {
+    "id": "ai-prompts",
+    "name": "ИИ и промпты",
+    "color": "#22D3EE",
+    "emoji": "🤖",
+    "maxUrl": "",
+    "adult": false,
+    "icon": "team-ai"
+  },
+  {
+    "id": "science-research",
+    "name": "Наука и исследования",
+    "color": "#A3E635",
+    "emoji": "🔬",
+    "maxUrl": "",
+    "adult": false,
+    "icon": "team-science"
+  },
+  {
+    "id": "producer-business",
+    "name": "Продюсеры и бизнес",
+    "color": "#FFC233",
+    "emoji": "💼",
+    "maxUrl": "",
+    "adult": false,
+    "icon": "team-producer"
+  },
+  {
+    "id": "education",
+    "name": "Преподаватели и образование",
+    "color": "#5B8CFF",
+    "emoji": "📚",
+    "maxUrl": "",
+    "adult": true,
+    "icon": "team-teachers"
+  },
+  {
+    "id": "investors",
+    "name": "Инвесторы",
+    "color": "#E2B97F",
+    "emoji": "📈",
+    "maxUrl": "",
+    "adult": true,
+    "icon": "team-investors"
+  },
+  {
+    "id": "partners",
+    "name": "Компании и партнёры",
+    "color": "#94A3B8",
+    "emoji": "🤝",
+    "maxUrl": "",
+    "adult": true,
+    "icon": "team-partners"
+  }
+]
